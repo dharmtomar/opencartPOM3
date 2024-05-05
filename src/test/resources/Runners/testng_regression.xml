@@ -7,7 +7,7 @@
 	<listeners>
 		<listener class-name="com.qa.opencart.listeners.ExtentReportListener"></listener>
 		<listener class-name="com.qa.opencart.listeners.AllureReportListener"></listener>
-		<!--<listener class-name="com.qa.opencart.listeners.AnnotationTransformer"></listener>-->
+		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer"></listener>
 	</listeners>
 
 	<test name="Opencart Login Test with chrome">
