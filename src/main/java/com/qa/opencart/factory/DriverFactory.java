@@ -85,14 +85,14 @@ public class DriverFactory {
 			case "chrome":
 
 				thLocal.set(
-						new RemoteWebDriver(new URL(prop.getProperty("remoteurl")), optionsManager.chromeOptions()));
+						new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.chromeOptions()));
 				break;
 			case "firefox":
 				thLocal.set(
-						new RemoteWebDriver(new URL(prop.getProperty("remoteurl")), optionsManager.firefoxOptions()));
+						new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.firefoxOptions()));
 				break;
 			case "msedge":
-				thLocal.set(new RemoteWebDriver(new URL(prop.getProperty("remoteurl")), optionsManager.edgeOptions()));
+				thLocal.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")), optionsManager.edgeOptions()));
 				break;
 			default:
 				Log.info("plz pass thr right supported browser on GRID....");
