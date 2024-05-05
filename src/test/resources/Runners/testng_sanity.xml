@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Sanity Suite" verbose="3" thread-count="5"
+	parallel="tests">
+
+	<listeners>
+		<listener class-name="com.qa.opencart.listeners.ExtentReportListener"></listener>
+		<listener class-name="com.qa.opencart.listeners.TestAllureListener"></listener>
+		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer"></listener>
+	</listeners>
+
+	<test name="Opencart Login Test with chrome">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest" />
+		</classes>
+	</test>
+	
+	<test name="Opencart RegisterUserTest Test">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.qa.opencart.tests.RegisterUserTest" />
+		</classes>
+	</test>
+
+</suite>
